@@ -1,0 +1,67 @@
+// To Play a game with deck of cards 
+import java.util.Scanner;
+
+public class card{
+	
+	public final int suit;
+	public final int rank;
+	
+	public card (int suit, int rank){
+		
+		if ((isValidSuit(suit) && isValidRank(rank)) == true){
+			
+			this.suit = suit;
+			this.rank = rank;
+		}
+		else{
+			System.out.println("Invalid entry");
+			this.suit = 0;
+			this.rank = 0;
+		}
+		
+	}
+		
+	boolean isValidSuit(int suit){
+		
+		if (suit >= 1 && suit <= 4)
+			return true;
+		else 
+			return false;
+	}
+
+	boolean isValidRank(int rank){
+		
+		if(rank >= 1 && rank <= 13)
+			return true;
+		else
+			return false;
+	}
+	
+	int getSuit(){
+		return suit;
+	}
+
+	int getRank(){
+		return rank;
+	}	
+
+	public static void main(String []args){
+		int suit, rank;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the Suit and Rank respectively");
+		suit = input.nextInt();
+		rank = input.nextInt();
+		card c = new card(suit, rank);
+		
+		if (c.isValidRank(rank) && c.isValidSuit(suit) == true){
+			System.out.println("Suit : " + c.getSuit() + " Rank : " + c.getRank());
+		}		
+		else
+			System.out.println("End of program");
+		
+	}	
+	
+}	
+			
+			
