@@ -4,9 +4,9 @@ To Create the Class Employee
 
 public class Employee{
 
-	int employee_id;
-	String name;
-	int basic_salary;
+	public int employee_id;
+	public String name;
+	public int basic_salary;
 	
 	Employee (int employee_id, String name, int basic_salary){
 		
@@ -17,13 +17,13 @@ public class Employee{
 	
 	public void ShowDetails (Employee e){
 		
-		System.out.println("Empployee id :- " + e.employee_id + "\tName :- " + e.name + "\tBasic Salary :- " + e.basic_salary);
+		System.out.println("Empployee id :- " + e.employee_id + "\tName :- " + e.name + "\tNet Salary :- " + e.basic_salary);
 	}	
 	
 	// Overriding the toString
 	public String toString(){
 		
-		return "Employee id\t" + employee_id + " Name\t" + name + " basic salary\t" + basic_salary;
+		return "Employee id\t" + employee_id + " Name\t" + name + " Net salary\t" + basic_salary;
 	}		
 	
 	public static void main (String args[]){
