@@ -1,0 +1,7 @@
+Java Swing.
+
+1.JRadioButton :-
+	#1.-> Use ButtonGroup (var) and use add method if the class i.e. ButtonGroup to add JRadioButton
+	#2.-> 
+2. JTable :-
+	#1.-> It uses ListListner
